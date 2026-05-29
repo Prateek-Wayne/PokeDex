@@ -1,16 +1,16 @@
-'use client';
+"use client";
 
-import { useCallback } from 'react';
+import { useCallback } from "react";
 
 const STORAGE_KEYS = {
-  favorites: 'pokedex-favorites',
-  lists: 'pokedex-lists',
-  teams: 'pokemon-teams',
-  recentlyViewed: 'pokedex-recently-viewed',
-  spritePreferences: 'pokedex-sprite-preferences',
-  pokedexPreference: 'pokedex-entry-preference',
-  whosThatPokemonBestStreak: 'whos-that-pokemon-best-streak',
-  theme: 'theme',
+  favorites: "pokedex-favorites",
+  lists: "pokedex-lists",
+  teams: "pokemon-teams",
+  recentlyViewed: "pokedex-recently-viewed",
+  spritePreferences: "pokedex-sprite-preferences",
+  pokedexPreference: "pokedex-entry-preference",
+  whosThatPokemonBestStreak: "whos-that-pokemon-best-streak",
+  theme: "theme",
 };
 
 export interface ExportedData {
@@ -47,7 +47,7 @@ export function useDataExport() {
       pokedexPreference: localStorage.getItem(STORAGE_KEYS.pokedexPreference),
       whosThatPokemonBestStreak:
         Number.parseInt(
-          localStorage.getItem(STORAGE_KEYS.whosThatPokemonBestStreak) || '0',
+          localStorage.getItem(STORAGE_KEYS.whosThatPokemonBestStreak) || "0",
           10,
         ) || 0,
     };
@@ -57,7 +57,7 @@ export function useDataExport() {
     (data: ExportedData): { success: boolean; error?: string } => {
       try {
         if (!data.version) {
-          return { success: false, error: 'Invalid data format' };
+          return { success: false, error: "Invalid data format" };
         }
 
         // Import favorites
@@ -103,7 +103,7 @@ export function useDataExport() {
         }
 
         // Import best streak
-        if (typeof data.whosThatPokemonBestStreak === 'number') {
+        if (typeof data.whosThatPokemonBestStreak === "number") {
           localStorage.setItem(
             STORAGE_KEYS.whosThatPokemonBestStreak,
             data.whosThatPokemonBestStreak.toString(),
@@ -115,7 +115,7 @@ export function useDataExport() {
         return {
           success: false,
           error:
-            error instanceof Error ? error.message : 'Failed to import data',
+            error instanceof Error ? error.message : "Failed to import data",
         };
       }
     },
@@ -125,12 +125,12 @@ export function useDataExport() {
   const downloadExport = useCallback(() => {
     const data = exportAllData();
     const blob = new Blob([JSON.stringify(data, null, 2)], {
-      type: 'application/json',
+      type: "application/json",
     });
     const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
+    const a = document.createElement("a");
     a.href = url;
-    a.download = `PokeDex-backup-${new Date().toISOString().split('T')[0]}.json`;
+    a.download = `PokeDex-backup-${new Date().toISOString().split("T")[0]}.json`;
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);

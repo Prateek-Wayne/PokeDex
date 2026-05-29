@@ -1,4 +1,4 @@
-import type { LucideIcon } from 'lucide-react';
+import type { LucideIcon } from "lucide-react";
 import {
   Database,
   Download,
@@ -13,12 +13,10 @@ import {
   Shield,
   Smartphone,
   Sparkles,
-  Twitter,
   Users,
   Zap,
-} from 'lucide-react';
-import type { ComponentType, SVGProps } from 'react';
-import { Butterfly } from '@/components/icons/bluesky';
+} from "lucide-react";
+import type { ComponentType, SVGProps } from "react";
 
 type IconComponent =
   | LucideIcon
@@ -77,137 +75,137 @@ export interface AboutPageConfig {
 
 export const aboutConfig: AboutPageConfig = {
   hero: {
-    title: 'PokeDex',
-    tagline: 'The Pokedex App',
+    title: "PokeDex",
+    tagline: "The Pokedex App",
     description:
-      'A fast, beautiful, and feature-rich Pokedex built for trainers who want instant access to everything Pokemon.',
+      "A fast, beautiful, and feature-rich Pokedex built for trainers who want instant access to everything Pokemon.",
     cta: {
-      label: 'Explore the Dex',
-      href: '/',
+      label: "Explore the Dex",
+      href: "/",
     },
   },
 
   features: [
     {
       icon: Search,
-      title: 'Instant Search',
+      title: "Instant Search",
       description:
-        'Find any Pokemon, move, ability, or item in milliseconds with smart search.',
-      accent: '#6366f1',
+        "Find any Pokemon, move, ability, or item in milliseconds with smart search.",
+      accent: "#6366f1",
     },
     {
       icon: Heart,
-      title: 'Favorites',
+      title: "Favorites",
       description:
-        'Save your favorite Pokemon for quick access anytime, anywhere.',
-      accent: '#ec4899',
+        "Save your favorite Pokemon for quick access anytime, anywhere.",
+      accent: "#ec4899",
     },
     {
       icon: Users,
-      title: 'Team Builder',
+      title: "Team Builder",
       description:
-        'Build and manage your dream teams with type coverage analysis and Showdown import/export.',
-      accent: '#14b8a6',
+        "Build and manage your dream teams with type coverage analysis and Showdown import/export.",
+      accent: "#14b8a6",
     },
     {
       icon: GitCompareArrows,
-      title: 'Compare Pokemon',
+      title: "Compare Pokemon",
       description:
-        'Side-by-side stat comparisons to find the perfect fit for your team.',
-      accent: '#f97316',
+        "Side-by-side stat comparisons to find the perfect fit for your team.",
+      accent: "#f97316",
     },
     {
       icon: MapPin,
-      title: 'Locations',
+      title: "Locations",
       description:
-        'Discover where to find Pokemon across all regions and games.',
-      accent: '#22c55e',
+        "Discover where to find Pokemon across all regions and games.",
+      accent: "#22c55e",
     },
     {
       icon: Moon,
-      title: 'Dark Mode',
-      description: 'Easy on the eyes with automatic light and dark themes.',
-      accent: '#8b5cf6',
+      title: "Dark Mode",
+      description: "Easy on the eyes with automatic light and dark themes.",
+      accent: "#8b5cf6",
     },
     {
       icon: Smartphone,
-      title: 'Install as App',
+      title: "Install as App",
       description:
-        'Add to your home screen for a native app experience on any device.',
-      accent: '#06b6d4',
+        "Add to your home screen for a native app experience on any device.",
+      accent: "#06b6d4",
     },
     {
       icon: Zap,
-      title: 'Lightning Fast',
-      description: 'Optimized for speed with instant navigation.',
-      accent: '#eab308',
+      title: "Lightning Fast",
+      description: "Optimized for speed with instant navigation.",
+      accent: "#eab308",
     },
     {
       icon: Sparkles,
-      title: 'Animated Sprites',
+      title: "Animated Sprites",
       description:
-        'Toggle between static and animated sprites for every Pokemon.',
-      accent: '#f43f5e',
+        "Toggle between static and animated sprites for every Pokemon.",
+      accent: "#f43f5e",
     },
     {
       icon: HelpCircle,
       title: "Who's That Pokemon?",
       description:
-        'Test your knowledge with a silhouette quiz featuring difficulty levels, streaks, and scoring.',
-      accent: '#a855f7',
+        "Test your knowledge with a silhouette quiz featuring difficulty levels, streaks, and scoring.",
+      accent: "#a855f7",
     },
     {
       icon: ListChecks,
-      title: 'Custom Lists',
+      title: "Custom Lists",
       description:
-        'Create and organize themed Pokemon lists beyond just favorites.',
-      accent: '#0ea5e9',
+        "Create and organize themed Pokemon lists beyond just favorites.",
+      accent: "#0ea5e9",
     },
     {
       icon: Shield,
-      title: 'Type Chart',
+      title: "Type Chart",
       description:
-        'Explore type effectiveness matchups and find Pokemon or moves by type.',
-      accent: '#ef4444',
+        "Explore type effectiveness matchups and find Pokemon or moves by type.",
+      accent: "#ef4444",
     },
     {
       icon: Download,
-      title: 'Data Backup',
+      title: "Data Backup",
       description:
-        'Export and import all your data — favorites, teams, lists, and settings.',
-      accent: '#10b981',
+        "Export and import all your data — favorites, teams, lists, and settings.",
+      accent: "#10b981",
     },
     {
       icon: Database,
-      title: 'Complete Data',
+      title: "Complete Data",
       description:
-        'Full Pokedex with stats, moves, abilities, evolutions, and more.',
-      accent: '#64748b',
+        "Full Pokedex with stats, moves, abilities, evolutions, and more.",
+      accent: "#64748b",
     },
   ],
 
   footerLinks: [
-    { label: 'Settings', href: '/settings' },
+    { label: "Settings", href: "/settings" },
     {
-      label: 'GitHub',
-      href: 'https://github.com/Prateek-Wayne/',
+      label: "GitHub",
+      href: "https://github.com/Prateek-Wayne/",
       external: true,
     },
     {
-      label: 'My Portfolio',
-      href: 'https://linkedin.com/in/prateek-verma',
+      label: "My Portfolio",
+      href: "https://linkedin.com/in/prateek-verma",
       external: true,
     },
   ],
 
   contact: {
-    title: 'built by',
-    handle: '@prateek-wayne',
-    handleHref: 'https://github.com/Prateek-Wayne/',
+    title: "built by",
+    handle: "@prateek-wayne",
+    handleHref: "https://github.com/Prateek-Wayne/",
     links: [
       {
-        label: 'GitHub',
-        href: 'https://github.com/Prateek-Wayne/',
+        label: "GitHub",
+        href: "https://github.com/Prateek-Wayne/",
         icon: Github,
       },
     ],
@@ -216,17 +214,17 @@ export const aboutConfig: AboutPageConfig = {
   attribution: {
     dataSources: [
       {
-        label: 'PokeAPI',
-        href: 'https://github.com/PokeAPI/pokeapi',
-        description: 'Pokemon data and game information',
+        label: "PokeAPI",
+        href: "https://github.com/PokeAPI/pokeapi",
+        description: "Pokemon data and game information",
       },
       {
-        label: 'pkmn/ps',
-        href: 'https://github.com/pkmn/ps',
-        description: 'Sprites and competitive data',
+        label: "pkmn/ps",
+        href: "https://github.com/pkmn/ps",
+        description: "Sprites and competitive data",
       },
     ],
     disclaimer:
-      'MIT Licensed · Pokemon is a trademark of Nintendo / Creatures Inc. / GAME FREAK Inc. This project is not affiliated with or endorsed by any of these companies.',
+      "MIT Licensed · Pokemon is a trademark of Nintendo / Creatures Inc. / GAME FREAK Inc. This project is not affiliated with or endorsed by any of these companies.",
   },
 };

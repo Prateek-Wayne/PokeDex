@@ -1,8 +1,8 @@
-import type { Metadata } from 'next';
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: 'Lists',
-  description: 'Your custom Pokemon lists on PokeDex.',
+  title: "Lists",
+  description: "Your custom Pokemon lists on PokeDex.",
   robots: { index: false, follow: false },
 };
 

@@ -1,16 +1,16 @@
-import type { Metadata } from 'next';
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: 'About',
+  title: "About",
   description:
-    'Learn about PokeDex — a modern Pokedex app with stats, moves, abilities, type coverage, team building, and more for all Pokemon generations.',
+    "Learn about PokeDex — a modern Pokedex app with stats, moves, abilities, type coverage, team building, and more for all Pokemon generations.",
   alternates: {
-    canonical: '/about',
+    canonical: "/about",
   },
   openGraph: {
-    title: 'About PokeDex',
+    title: "About PokeDex",
     description:
-      'A modern Pokedex app with stats, moves, abilities, type coverage, team building, and more for all Pokemon generations.',
+      "A modern Pokedex app with stats, moves, abilities, type coverage, team building, and more for all Pokemon generations.",
   },
 };
 

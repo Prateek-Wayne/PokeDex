@@ -1,18 +1,18 @@
-'use client';
+"use client";
 
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from "react";
 
-export type ContentWidth = 'contained' | 'full';
+export type ContentWidth = "contained" | "full";
 
-const STORAGE_KEY = 'PokeDex-content-width';
+const STORAGE_KEY = "PokeDex-content-width";
 
 export function useContentWidth() {
-  const [contentWidth, setContentWidth] = useState<ContentWidth>('contained');
+  const [contentWidth, setContentWidth] = useState<ContentWidth>("contained");
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
     const stored = localStorage.getItem(STORAGE_KEY);
-    if (stored === 'contained' || stored === 'full') {
+    if (stored === "contained" || stored === "full") {
       setContentWidth(stored);
     }
     setIsLoaded(true);
@@ -23,8 +23,8 @@ export function useContentWidth() {
     localStorage.setItem(STORAGE_KEY, contentWidth);
   }, [contentWidth, isLoaded]);
 
-  const setContained = useCallback(() => setContentWidth('contained'), []);
-  const setFull = useCallback(() => setContentWidth('full'), []);
+  const setContained = useCallback(() => setContentWidth("contained"), []);
+  const setFull = useCallback(() => setContentWidth("full"), []);
 
   return {
     contentWidth,
