@@ -1,0 +1,401 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --background: #fafafa;
+  --foreground: #1e1b4b;
+  --card: #ffffff;
+  --card-foreground: #1e1b4b;
+  --popover: #ffffff;
+  --popover-foreground: #1e1b4b;
+  --primary: #6d28d9;
+  --primary-foreground: #ffffff;
+  --secondary: #ede9fe;
+  --secondary-foreground: #4c1d95;
+  --muted: #f5f3ff;
+  --muted-foreground: #7c3aed;
+  --accent: #ede9fe;
+  --accent-foreground: #5b21b6;
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+  --success: #16a34a;
+  --success-foreground: #ffffff;
+  --border: #ddd6fe;
+  --input: #ddd6fe;
+  --ring: #7c3aed;
+  --chart-1: #6d28d9;
+  --chart-2: #7c3aed;
+  --chart-3: #8b5cf6;
+  --chart-4: #a78bfa;
+  --chart-5: #c4b5fd;
+  --radius: 0.5rem;
+  --sidebar: #fafafa;
+  --sidebar-foreground: #1e1b4b;
+  --sidebar-primary: #6d28d9;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #ede9fe;
+  --sidebar-accent-foreground: #4c1d95;
+  --sidebar-border: #ddd6fe;
+  --sidebar-ring: #7c3aed;
+}
+
+.dark {
+  --background: #0f0b1e;
+  --foreground: #ede9fe;
+  --card: #1a1030;
+  --card-foreground: #ede9fe;
+  --popover: #1a1030;
+  --popover-foreground: #ede9fe;
+  --primary: #a78bfa;
+  --primary-foreground: #1e1b4b;
+  --secondary: #2d1f4e;
+  --secondary-foreground: #c4b5fd;
+  --muted: #1e1535;
+  --muted-foreground: #a78bfa;
+  --accent: #2d1f4e;
+  --accent-foreground: #c4b5fd;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: #3b2d6e;
+  --input: #3b2d6e;
+  --ring: #7c3aed;
+  --chart-1: #a78bfa;
+  --chart-2: #8b5cf6;
+  --chart-3: #7c3aed;
+  --chart-4: #6d28d9;
+  --chart-5: #c4b5fd;
+  --sidebar: #0d0920;
+  --sidebar-foreground: #ede9fe;
+  --sidebar-primary: #a78bfa;
+  --sidebar-primary-foreground: #1e1b4b;
+  --sidebar-accent: #2d1f4e;
+  --sidebar-accent-foreground: #c4b5fd;
+  --sidebar-border: #2d1f4e;
+  --sidebar-ring: #7c3aed;
+}
+
+@theme inline {
+  --font-sans: var(--font-geist-mono);
+  --font-mono: var(--font-geist-mono);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 2px);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) + 2px);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings:
+      "liga" 0,
+      "calt" 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply tracking-tight font-medium;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  opacity: 0.4;
+  border-radius: 9999px;
+}
+
+/* Terminal code styling */
+.code-addition {
+  color: #00ff00;
+}
+
+.code-deletion {
+  color: #ff0000;
+}
+
+/* Pixel art rendering */
+.pixelated {
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+  object-fit: contain;
+  object-position: center;
+}
+
+/* PWA safe area utilities */
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+.pt-safe {
+  padding-top: env(safe-area-inset-top, 0px);
+}
+
+.pb-nav {
+  padding-bottom: calc(3rem + env(safe-area-inset-bottom, 0px));
+}
+
+/* App chrome height (desktop header + optional secondary toolbar) */
+.app-shell {
+  --app-secondary-height: 3.5rem; /* 56px */
+  --app-top-offset: 0px; /* mobile default (no desktop header) */
+  --app-bottom-offset: 3rem; /* mobile bottom nav (h-12) */
+}
+
+.app-shell[data-secondary="true"] {
+  --app-top-offset: var(--app-secondary-height);
+}
+
+@media (min-width: 1024px) {
+  .app-shell {
+    --app-top-offset: 3.5rem; /* desktop header */
+    --app-bottom-offset: 0px; /* no bottom nav on desktop */
+  }
+
+  .app-shell[data-secondary="true"] {
+    --app-top-offset: 7rem; /* desktop header + secondary */
+  }
+}
+
+/* PWA standalone mode - only applies on mobile/tablet (below lg breakpoint) */
+@media (display-mode: standalone) and (max-width: 1023px) {
+  /* Glass header that stretches to top with internal safe area padding */
+  .app-shell .pwa-glass-header {
+    top: 0;
+    padding-top: env(safe-area-inset-top, 0px);
+    background: color-mix(in srgb, var(--background) 85%, transparent);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+  }
+
+  /* Glass bottom nav */
+  .app-shell .pwa-glass-nav {
+    background: color-mix(in srgb, var(--background) 85%, transparent);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+  }
+
+  /* Sticky toolbar inside main content - extends blur to cover safe area */
+  .app-shell .pwa-sticky-toolbar {
+    background: color-mix(in srgb, var(--background) 85%, transparent);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+  }
+
+  /* Pseudo-element to extend blur effect into safe area */
+  .app-shell .pwa-sticky-toolbar::before {
+    content: "";
+    position: absolute;
+    top: calc(-1 * env(safe-area-inset-top, 0px));
+    left: 0;
+    right: 0;
+    height: env(safe-area-inset-top, 0px);
+    background: inherit;
+    backdrop-filter: inherit;
+    -webkit-backdrop-filter: inherit;
+  }
+
+  /* Main content padding - just needs small gap when no secondary toolbar */
+  .app-shell .pwa-pt-safe {
+    padding-top: calc(
+      var(--app-top-offset, 0px) +
+      env(safe-area-inset-top, 0px)
+    );
+  }
+
+  /* Main content height accounting for safe areas - no extra safe area top since header covers it */
+  .app-shell .pwa-main-height {
+    height: calc(
+      100dvh -
+      var(--app-bottom-offset, 0px) -
+      env(safe-area-inset-bottom, 0px)
+    );
+    max-height: calc(
+      100dvh -
+      var(--app-bottom-offset, 0px) -
+      env(safe-area-inset-bottom, 0px)
+    );
+  }
+}
+
+/* iOS Safari standalone fallback using supports */
+@supports (-webkit-touch-callout: none) {
+  @media (display-mode: standalone) and (max-width: 1023px) {
+    .app-shell .pwa-glass-header {
+      top: 0;
+      padding-top: env(safe-area-inset-top, 0px);
+      background: color-mix(in srgb, var(--background) 85%, transparent);
+      backdrop-filter: blur(20px) saturate(180%);
+      -webkit-backdrop-filter: blur(20px) saturate(180%);
+    }
+
+    .app-shell .pwa-glass-nav {
+      background: color-mix(in srgb, var(--background) 85%, transparent);
+      backdrop-filter: blur(20px) saturate(180%);
+      -webkit-backdrop-filter: blur(20px) saturate(180%);
+    }
+
+    .app-shell .pwa-sticky-toolbar {
+      background: color-mix(in srgb, var(--background) 85%, transparent);
+      backdrop-filter: blur(20px) saturate(180%);
+      -webkit-backdrop-filter: blur(20px) saturate(180%);
+    }
+
+    .app-shell .pwa-sticky-toolbar::before {
+      content: "";
+      position: absolute;
+      top: calc(-1 * env(safe-area-inset-top, 0px));
+      left: 0;
+      right: 0;
+      height: env(safe-area-inset-top, 0px);
+      background: inherit;
+      backdrop-filter: inherit;
+      -webkit-backdrop-filter: inherit;
+    }
+
+    .app-shell .pwa-pt-safe {
+      padding-top: calc(
+        var(--app-top-offset, 0px) +
+        env(safe-area-inset-top, 0px)
+      );
+    }
+
+    .app-shell .pwa-main-height {
+      height: calc(
+        100dvh -
+        var(--app-bottom-offset, 0px) -
+        env(safe-area-inset-bottom, 0px)
+      );
+      max-height: calc(
+        100dvh -
+        var(--app-bottom-offset, 0px) -
+        env(safe-area-inset-bottom, 0px)
+      );
+    }
+  }
+}
+
+/* PWA loading screen - shown instantly before JS loads, only in standalone mode */
+.pwa-loading-screen {
+  display: none;
+}
+
+@media (display-mode: standalone) {
+  .pwa-loading-screen {
+    display: flex;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+    background: #09090b;
+  }
+}
+
+.pwa-loading-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.pwa-loading-title {
+  font-family: var(--font-geist-mono), ui-monospace, monospace;
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  color: #e0e0e0;
+}
+
+.pwa-loading-bar {
+  width: 8rem;
+  height: 2px;
+  background: #333333;
+  overflow: hidden;
+}
+
+.pwa-loading-bar-fill {
+  height: 100%;
+  width: 40%;
+  background: #e0e0e0;
+  animation: pwa-loading-slide 1s ease-in-out infinite;
+}
+
+@keyframes pwa-loading-slide {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(350%);
+  }
+}
+
+.pwa-loading-fade-out {
+  animation: pwa-loading-fade 0.3s ease-out forwards;
+}
+
+@keyframes pwa-loading-fade {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+/* Fix mobile fixed positioning issues during scroll */
+.fixed-bottom-stable {
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
