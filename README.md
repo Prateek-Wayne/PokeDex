@@ -1,7 +1,11 @@
+
+
+
 # PokeDex
 
 A fast, beautiful, and feature-rich Pokedex built for trainers who want instant access to everything Pokemon.
 
+https://github.com/user-attachments/assets/822a233e-25d0-4d53-b21e-5b36115cb836
 ## What is this?
 
 PokeDex is a modern web-based Pokedex covering the full National Dex across all generations. It goes beyond a simple lookup tool — you can search for any Pokemon, move, ability, or item instantly, build and manage teams with type coverage analysis, compare Pokemon side by side, track favorites, and create custom lists. It works offline as a PWA and supports dark mode.
